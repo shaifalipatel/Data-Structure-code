@@ -1,4 +1,4 @@
-   package Linklist;
+   package DataStructure.Linklist;
 
    public class ListNode {
     int val;
@@ -55,14 +55,21 @@
     }
 
     public static void main(String[] args) {
-     ListNode listNode = new ListNode();
-     listNode.val = 10;
-     listNode.next.val= 20;
-     listNode.next.next.val= 30;
-     ListNode n = listNode;
-     while (n != null) {
+     ListNode listNode = new ListNode(1,new ListNode(2,null));
+     ListNode listNode1 = new ListNode(1,new ListNode(3,
+             new ListNode(4,null)));
+     /*MergeList linkList = new MergeList();
+     ListNode n= linkList.mergeTwoLists(listNode, listNode1);*/
+     ReverseList reverseList = new ReverseList();
+     /*ListNode listNode2 = reverseList.reverseListRecursive(listNode1);*/
+/*     MidLinkedList midLinkedList =  new MidLinkedList();
+     ListNode re = midLinkedList.Middle(listNode1);*/
+        DetectCycle detectCycle = new DetectCycle();
+        detectCycle.detectCycle(listNode1);
+
+   /*  while (n != null) {
       System.out.print(n.val + " ");
       n = n.next;
-     }
+     }*/
     }
    }

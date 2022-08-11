@@ -6,8 +6,9 @@ public interface FixedStack {
 
 }
 
-class FixedStackImpl implements FixedStack{
+class FixedStackImpl implements FixedStack {
     int[] stack;
+    int[] result = new int[stack.length];
     int pointer;
 
     public FixedStackImpl(int size) {
@@ -44,12 +45,33 @@ class FixedStackImpl implements FixedStack{
         return stack[pointer--];
     }
 }
+
+class TestImpl implements FixedStack{
+
+    /**
+     * @param item
+     */
+    @Override
+    public void push(int item) {
+
+    }
+
+    /**
+     * @param item
+     * @return
+     */
+    @Override
+    public int pop(int item) {
+        return 0;
+    }
+}
 class TestStack{
     public static void main(String[] args){
         FixedStack fixedStack = new FixedStackImpl(3);
         fixedStack.push(3);
         fixedStack.push(2);
         fixedStack.push(1);
+        fixedStack.push(3);
         fixedStack.push(3);
 
     }
